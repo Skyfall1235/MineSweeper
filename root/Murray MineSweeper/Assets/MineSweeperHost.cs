@@ -5,14 +5,13 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class MineSweeperHost : MonoBehaviour
 {
     #region variables
     //difficulty Control
-    private int sizeOfGridTable;
-    private int DifficultyOfGrid; //must be 1-4, change the slider to relfect the opposite
-    [SerializeField] TMP_Dropdown dropdown;
+    [SerializeField] private int sizeOfGridTable;
 
     //Prefabs
     [SerializeField] Tile bomb;
@@ -25,7 +24,9 @@ public class MineSweeperHost : MonoBehaviour
     Tile[] gameTiles;
 
 
-    //fill me in later
+    //Panels n UI
+    [SerializeField] GameObject mainMenuPanel;
+    [SerializeField] GameObject gamePanel;
 
     #endregion
 
@@ -36,7 +37,10 @@ public class MineSweeperHost : MonoBehaviour
     }
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            GenerateGrid();
+        }
     }
     #endregion
 
@@ -46,97 +50,59 @@ public class MineSweeperHost : MonoBehaviour
         //initialises the tile array to the size of the grid size
         int totalArraySize = (sizeOfGridTable * sizeOfGridTable) - 1;
         //makes the array that size so we get what we need and no more
+        Debug.Log(totalArraySize);
         gameTiles = new Tile[totalArraySize];
+        Debug.Log(totalArraySize);
+        //fills the array with the appropriate amount of bombs placed in a random location
+        FillArray(bomb, emptyTile);
+    }
 
-        //set some empty values to keep track of later
-        int xValue = 0;
-        int yValue = 0;
+    void PickTile()
+    {
 
-        
-        for (int i = 0; i < totalArraySize; i++)
-        {
-
-            //spawn tiles there, and place those tiles into the array at their position
-            var createdTile = Instantiate(BombDifficultyRandomiser(), new Vector3(xValue, yValue), quaternion.identity);
-            //give th tile a name so we can check it later
-            createdTile.name = $"Tile {xValue}, {yValue}, Pos ";
-            gameTiles[i] = createdTile;
-            //keep track of the X & y position
-            if (i % sizeOfGridTable == 0)
-            {
-                xValue++;
-                yValue = 0;
-            }
-            else
-            {
-                yValue++;
-            }
-        }
-        //run the following to confirm thaty at least 1 bomb is always present in the game
-        int bombsInScene = 0;
-        for (int i = 0; i < totalArraySize; i++)
-        {
-            if (gameTiles[i] == bomb)
-            {
-                bombsInScene++;
-            }
-        }
-        if (bombsInScene == 0)
-        {
-            GenerateGrid();
-        }
     }
 
     #endregion
 
     #region Useless Methods
 
-    int DropdownValueChanged(TMP_Dropdown change)
+    public void FillArray(Tile bomb, Tile emptyTile)
     {
-        int selectedOption = change.value;
-        Debug.Log("Selected Option: " + selectedOption);
-        switch(selectedOption)
+        for (int i = 0; i < gameTiles.Length; i++)
         {
-            case 0:
-                return 4;
-            case 1:
-                return 3;
-            case 2:
-                return 2;
-            default:
-                return 4;
-        }   
+            gameTiles[i] = emptyTile;
+        }
+
+        int bombsPlaced = 0;
+        while (bombsPlaced < 5)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, gameTiles.Length);
+            if (gameTiles[randomIndex] == emptyTile)
+            {
+                gameTiles[randomIndex] = bomb;
+                bombsPlaced++;
+            }
+        }
     }
 
-    Tile BombDifficultyRandomiser()
+    void DetectSurroundingTiles()
     {
-        int chooseOne = UnityEngine.Random.Range(0, DropdownValueChanged(dropdown));
 
-        if (chooseOne == 0)
-        {
-            return bomb;
-        }
-        else
-        {
-            return emptyTile;
-        }
     }
 
     #endregion
 
     #region buttons
-    void StartButton()
+    public void Quitbutton()
     {
-
-    }
-    void Quitbutton()
-    {
-
+        Application.Quit();
     }
 
-    void Playbutton()
+    public void Playbutton()
     {
         GenerateGrid();
+        //hide the main menu panel
+        mainMenuPanel.SetActive(false);
     }
     #endregion
 
