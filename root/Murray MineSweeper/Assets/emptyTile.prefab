@@ -254,7 +254,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4308797902869176372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &4073207330745702898
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851269215470789843}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: emptyTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
