@@ -1,3 +1,10 @@
+//////////////////////////////////////////////////////
+// Assignment/Lab/Project: mineSweeper
+//Name: Wyatt Murray
+//Section: 2023SP.SGD.213.2172
+//Instructor: Brian Sowers
+// Date: 2/7/23
+//////////////////////////////////////////////////////
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -27,6 +34,8 @@ public class MineSweeperHost : MonoBehaviour
     //Panels n UI
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject gamePanel;
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject losePanel;
 
     #endregion
 
@@ -44,6 +53,8 @@ public class MineSweeperHost : MonoBehaviour
     }
     #endregion
 
+    //did not complete the top or bottom rows, or display a win screen.
+
     #region useful Methods
     void GenerateGrid()
     {
@@ -55,6 +66,7 @@ public class MineSweeperHost : MonoBehaviour
 
     void FillArray(GameObject bomb, GameObject emptyTile)
     {
+        //fill all the tiles with empty tile first
         for (int i = 0; i < gameTiles.Length; i++)
         {
             gameTiles[i] = emptyTile;
@@ -62,24 +74,34 @@ public class MineSweeperHost : MonoBehaviour
 
 
         int bombsPlaced = 0;
+        //keep track of how many are placed
         while (bombsPlaced < 5)
         {
             int randomIndex = UnityEngine.Random.Range(0, gameTiles.Length);
+            //confimr a bomb already isnt there, and if its not, place one while there are bombs
+            //left to place
             if (gameTiles[randomIndex] == emptyTile)
             {
                 gameTiles[randomIndex] = bomb;
                 bombsPlaced++;
+                //keep to know where the bombs are
                 Debug.Log(randomIndex);
             }
         }
     }
+
+
+
+    //note, needs conditionals to confirm that if the top or bottom rows are selected
+    //that they dont run the check negatives for top or check positives for bottom
+    //as they will error and fail to finish.
 
     void DetectSurroundingTiles(int ButtonElementNumber)
     {
         //get the element number of the object
         if(gameTiles[ButtonElementNumber] == bomb)
         {
-            //display gameover panel
+            losePanel.SetActive(true);
         }
 
         int bombsNearby = 0;

@@ -133,6 +133,81 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
   m_PrefabInstance: {fileID: 1458989810}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &220262916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220262917}
+  - component: {fileID: 220262919}
+  - component: {fileID: 220262918}
+  m_Layer: 5
+  m_Name: LosePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &220262917
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220262916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1049246058}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &220262918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220262916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.044234507, g: 0.4528302, b: 0.023495909, a: 0.6509804}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &220262919
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220262916}
+  m_CullTransparentMesh: 1
 --- !u!1 &234866223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
@@ -225,7 +300,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 275914759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061909151}
+        m_TargetAssemblyTypeName: MineSweeperHost, Assembly-CSharp
+        m_MethodName: Playbutton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &275914759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +503,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -632,6 +735,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
       value: 13
@@ -839,6 +958,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -1191,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickButton2
+      value: OnClickButton12
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1302,7 +1437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickButton0
+      value: OnClickButton6
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1386,6 +1521,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
       value: 21
@@ -1465,6 +1616,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
       value: 17
@@ -1493,7 +1660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &747169624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1509,7 +1676,7 @@ RectTransform:
   - {fileID: 275914757}
   - {fileID: 1585269339}
   m_Father: {fileID: 1049246058}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1635,7 +1802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickButton3
+      value: OnClickButton11
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1724,6 +1891,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
       value: 19
@@ -1777,6 +1960,7 @@ RectTransform:
   m_Children:
   - {fileID: 1760518063}
   - {fileID: 1784902003}
+  - {fileID: 220262917}
   - {fileID: 747169624}
   m_Father: {fileID: 2061909150}
   m_RootOrder: 0
@@ -2062,7 +2246,7 @@ PrefabInstance:
       objectReference: {fileID: 2061909151}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickButton5
+      value: OnClickButton8
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2152,7 +2336,7 @@ PrefabInstance:
       objectReference: {fileID: 2061909151}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickButton4
+      value: OnClickButton9
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2251,6 +2435,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
       value: 20
@@ -2324,6 +2524,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -2512,7 +2728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickButton1
+      value: OnClickButton7
       objectReference: {fileID: 0}
     - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2616,13 +2832,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2061909149}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2061909151}
+        m_TargetAssemblyTypeName: MineSweeperHost, Assembly-CSharp
+        m_MethodName: Quitbutton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2728,6 +2944,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -2941,6 +3173,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -3205,6 +3453,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
       value: 18
@@ -3283,6 +3547,42 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132216510406435845, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132216510406435845, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 52.1882
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132216510406435845, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132216510406435845, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9.8059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518607526309205445, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_margin.z
+      value: 54.54874
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -3363,6 +3663,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
       value: 14
@@ -3441,6 +3757,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -3533,6 +3865,8 @@ MonoBehaviour:
   - {fileID: 234866223}
   mainMenuPanel: {fileID: 747169623}
   gamePanel: {fileID: 1760518062}
+  winPanel: {fileID: 0}
+  losePanel: {fileID: 0}
 --- !u!1001 &2078137148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3595,6 +3929,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
@@ -3669,6 +4019,22 @@ PrefabInstance:
     - target: {fileID: 851269215470789843, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2061909151}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickButton16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineSweeperHost, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086810115370521980, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7129420061867700382, guid: f69c7cc6af4d3be468a8cd87369acba3, type: 3}
       propertyPath: m_Name
